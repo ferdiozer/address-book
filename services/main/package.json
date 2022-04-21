@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "crypto-js": "^3.1.9-1",
+    "fastify": "^2.5.0",
+    "hetzner-cloud-api": "^1.2.8",
+    "moment": "^2.29.2",
+    "mongodb": "^3.6.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
