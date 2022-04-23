@@ -1,0 +1,37 @@
+org: ferdiozer
+app: addressbook
+service: auth
+
+package:
+  individually: true
+
+provider:
+  httpApi:
+    metrics: true
+  lambdaHashingVersion: 20201221
+  logRetentionInDays: 3
+  name: aws
+  runtime: nodejs12.x
+  # stage: dev
+  region: us-east-1
+  apiGateway:
+    shouldStartNameWithService: true
+  environment:
+    SERVICE_MAIN: ${env:SERVICE_MAIN}
+    SENTRY_DSN: ${env:SENTRY_DSN}
+    KEEPLOGS: ${env:KEEPLOGS}
+    MONGOCS: ${env:MONGOCS}
+    SECRET: ${env:SECRET}
+
+plugins:
+  - serverless-apigw-binary
+
+functions:
+  app:
+    handler: lambda.prepare
+    events:
+      - http: 'ANY /{proxy+}'
+custom:
+  apigwBinary:
+    types:
+      - '*/*'

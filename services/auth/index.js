@@ -9,11 +9,13 @@
 ................................................ferdiozer.com
 */
 
-const fastify = require('fastify')()
-const { APP_PORT } = require('./config')
+const fastify = require('fastify')({ logger: true })
+const { APP_PORT, MONGO_DATABASE_URL } = require('./config')
+const { swaggerFun } = require('./swagger')
+const helmet = require('fastify-helmet')
+
 
 const froutes = []
-
 fastify.addHook('onRoute', (routeOptions) => {
   froutes.push({
     method: routeOptions.method,
@@ -25,15 +27,35 @@ fastify.addHook('onRoute', (routeOptions) => {
 
 fastify.register(require('./lib/routes'), { prefix: '/api/v1' })
 
-const start = async () => {
-  try {
-    console.log(new Date(), 'try to start')
-    await fastify.listen(APP_PORT)
-    console.log(new Date(), `server listening on ${fastify.server.address().port}`)
-  } catch (err) {
-    fastify.log.error(err)
-    console.log('Could not start', err)
-    process.exit(1)
+
+
+fastify.register(require("fastify-mongodb"), {
+  forceClose: true,
+  url: MONGO_DATABASE_URL,
+});
+/*
+fastify.register(
+  helmet,
+  { hidePoweredBy: { setTo: 'PHP 8.0.18' } }
+)
+*/
+
+swaggerFun(fastify)
+
+
+
+
+fastify.get("/", function (req, reply) {
+  reply.send("Hello, world!");
+});
+
+fastify.listen(APP_PORT, function (err, address) {
+  if (err) {
+    fastify.log.error(err);
+    process.exit(1);
   }
-}
-start()
+  fastify.log.info(`server listening on ${address}`);
+
+});
+
+

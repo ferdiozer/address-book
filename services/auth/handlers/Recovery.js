@@ -1,6 +1,4 @@
 
-const db = require("../lib/mongo_pool")
-
 
 const RecoveryController = {
   test: async (request, reply) => {

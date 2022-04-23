@@ -1,6 +1,4 @@
 
-const db = require("../lib/mongo_pool")
-
 
 const UpdateController = {
     test: async (request, reply) => {

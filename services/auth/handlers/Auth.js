@@ -1,7 +1,4 @@
 
-const db = require("../lib/mongo_pool")
-
-
 const AuthController = {
   test: async (request, reply) => {
     let { params } = request

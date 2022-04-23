@@ -1,11 +1,11 @@
-const Update = require('../handlers/Update')
+const Register = require('../handlers/Register')
 
 
 module.exports = function (fastify, opts, next) {
   fastify.route({
     method: 'POST',
-    url: '/update',
-    handler: Update.test
+    url: '/',
+    handler: Register.register
   })
 
 
