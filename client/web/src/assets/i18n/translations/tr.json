@@ -1,0 +1,18 @@
+{
+  "home": "Ana Sayfa",
+  "common": {
+    "save": "KAYDET",
+    "name": "Ad",
+    "surname": "Soyad",
+    "mail": "E-Posta",
+    "phone": "Telefon",
+    "id": "TC Kimlik",
+    "birth": "Doğum Tarihi",
+    "fullName": "Ad Soyad",
+    "taxNo": "Vergi No",
+    "taxOffice": "Vergi Dairesi",
+    "moneySymbol": "₺",
+    "date": "Tarih",
+    "hour": "Saat"
+  }
+}

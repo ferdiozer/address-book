@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "fastify": "^3.28.0",
+    "fastify-cors": "^6.0.3",
     "fastify-helmet": "^3.0.0",
     "fastify-mongodb": "^4.1.1",
     "fastify-swagger": "^4.17.1",

@@ -1,0 +1,88 @@
+{
+  "name": "addressbook",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "email": "ingo@ferdiozer.com",
+    "name": "Ferdi Özer (Piyanos Tech)",
+    "url": "https://www.ferdiozer.com"
+  },
+  "dependencies": {
+    "@craco/craco": "^6.4.2",
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "async-validator": "^4.0.7",
+    "axios": "^0.24.0",
+    "dayjs": "^1.10.7",
+    "google-map-react": "^2.1.10",
+    "html-react-parser": "^1.4.2",
+    "i18next": "^21.6.0",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "i18next-xhr-backend": "^3.2.2",
+    "inputmask": "^5.0.6",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.34",
+    "point-in-polygon": "^1.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-cool-onclickoutside": "^1.7.0",
+    "react-dom": "^17.0.2",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.2.2",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.30.0",
+    "react-i18next": "^11.14.3",
+    "react-icons": "^4.3.1",
+    "react-input-verification-code": "^0.8.0",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "react-time-picker": "^4.4.4",
+    "react-toastify": "^8.1.0",
+    "react-verification-code-input": "^1.2.9",
+    "redux": "^4.1.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.0.1",
+    "xlsx": "^0.17.4"
+  },
+  "scripts": {
+    "start": "craco  start",
+    "build": "craco  build",
+    "test": "craco  test",
+    "eject": "craco eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "react-svg-loader": "^3.0.3",
+    "svg-url-loader": "^7.1.1",
+    "tailwind-svg-import": "^0.4.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  },
+  "cracoConfig": "craco.config.js"
+}

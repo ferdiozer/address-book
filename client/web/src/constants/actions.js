@@ -1,0 +1,53 @@
+
+
+export const SET_LOCALE = 'SET_LOCALE';
+
+export const SET_LOADING = 'SET_LOADING';
+
+export const SET_USER = 'SET_USER';
+
+export const GET_TEST = 'GET_TEST';
+export const SET_TEST = 'SET_TEST';
+
+/////////  AUTH  ////////
+export const LOGIN = 'LOGIN';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_ERROR = 'LOGIN_ERROR';
+
+export const LOGOUT = 'LOGOUT';
+
+export const REGISTER = 'REGISTER';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_ERROR = 'REGISTER_ERROR';
+
+export const RESET_AUTH = 'RESET_AUTH';
+
+
+// * cms mutations
+export const CMS_LOADING = 'startCmsLoading';
+export const CMS_FAIL = 'cmsFail';
+export const SET_FAQ_LIST = 'setFaqList';
+
+// * cms actions
+export const GET_FAQ_LIST = 'GET_FAQ_LIST';
+export const GET_FAQ_LIST_SUCCESS = 'GET_FAQ_LIST_SUCCESS';
+export const GET_FAQ_LIST_ERROR = 'GET_FAQ_LIST_ERROR';
+
+export const CMS_APPLICATION_POST = 'CMS_APPLICATION_POST';
+export const CMS_APPLICATION_POST_SUCCESS = 'CMS_APPLICATION_POST_SUCCESS';
+export const CMS_APPLICATION_POST_ERROR = 'CMS_APPLICATION_POST_ERROR';
+
+
+export const GET_TESTIMONIAL_LIST = 'GET_TESTIMONIAL_LIST';
+export const GET_TESTIMONIAL_LIST_SUCCESS = 'GET_TESTIMONIAL_LIST_SUCCESS';
+export const GET_TESTIMONIAL_LIST_ERROR = 'GET_TESTIMONIAL_LIST_ERROR';
+
+export const GET_STATIC_PAGES = 'GET_STATIC_PAGES';
+export const GET_STATIC_PAGES_SUCCESS = 'GET_STATIC_PAGES_SUCCESS';
+export const GET_STATIC_PAGES_ERROR = 'GET_STATIC_PAGES_ERROR';
+
+export const SEND_APPLICATION = 'SEND_APPLICATION';
+export const SEND_APPLICATION_SUCCESS = 'SEND_APPLICATION_SUCCESS';
+export const SEND_APPLICATION_ERROR = 'SEND_APPLICATION_ERROR';
+
+

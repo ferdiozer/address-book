@@ -1,0 +1,20 @@
+name: web
+component: website
+
+package:
+  individually: true
+
+provider:
+  httpApi:
+    metrics: true
+  name: aws
+  lambdaHashingVersion: 20201221
+  logRetentionInDays: 1
+  runtime: nodejs12.x
+  region: us-east-1
+
+inputs:
+  src:
+    src: ./src
+    hook: yarn build
+    dist: ./build

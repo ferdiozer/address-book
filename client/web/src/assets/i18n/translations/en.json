@@ -1,0 +1,16 @@
+{
+  "home": "Home",
+  "common": {
+    "save": "SAVE",
+    "name": "Name",
+    "surname": "Surname",
+    "mail": "E-Mail",
+    "phone": "Phone",
+    "id": "ID Number",
+    "birth": "Date of Birth",
+    "fullName": "Name Surname",
+    "taxNo": "Tax ID",
+    "taxOffice": "Tax Office",
+    "moneySymbol": "₺"
+  }
+}

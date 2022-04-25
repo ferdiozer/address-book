@@ -17,6 +17,9 @@ async function listUsers(req, reply) {
 
 async function addUser(req, reply) {
 
+    // reply.header("Access-Control-Allow-Origin", "*");
+    // reply.header("Access-Control-Allow-Methods", "POST");
+
     const { email, password, name } = req.body;
     const data = { email, password, name };
 

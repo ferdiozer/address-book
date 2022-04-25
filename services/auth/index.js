@@ -27,6 +27,9 @@ fastify.addHook('onRoute', (routeOptions) => {
 
 fastify.register(require('./lib/routes'), { prefix: '/api/v1' })
 
+fastify.register(require('fastify-cors'), {
+  origin: '*'
+})
 
 
 fastify.register(require("fastify-mongodb"), {
