@@ -10,7 +10,8 @@
 */
 
 const fastify = require('fastify')()
-const { APP_PORT } = require('./config')
+
+const { APP_PORT, MONGO_DATABASE_URL } = require('./config')
 
 const froutes = []
 
@@ -24,6 +25,18 @@ fastify.addHook('onRoute', (routeOptions) => {
 })
 
 fastify.register(require('./lib/routes'), { prefix: '/api/v1' })
+fastify.register(require('fastify-cors'), {
+  origin: '*'
+})
+
+fastify.register(require("fastify-mongodb"), {
+  forceClose: true,
+  url: MONGO_DATABASE_URL,
+});
+
+fastify.register(require('fastify-helmet'),
+  { hidePoweredBy: { setTo: 'PHP 8.0.18' } }
+)
 
 const start = async () => {
   try {
@@ -37,3 +50,8 @@ const start = async () => {
   }
 }
 start()
+
+
+
+
+
